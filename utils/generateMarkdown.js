@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 let licenseString;
 let licenseRender;
+let contString;
 
 function renderLicenseBadge(license) {
   if (license.licenses === 'MIT') {
@@ -21,6 +22,15 @@ function renderLicenseLink(licenseString) {
   } else if (licenseString === 'bsl-1.0') {
     licenseRender = '[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
   }
+}
+
+function splitContributions(data) {
+  let contString = data.contribute;
+  let contArr = contString.split(',');
+  for (i = 0; i < contArr.length; i++) {
+    return `[${contArr[i]}](https://github.com/${contArr[i]})`;
+
+  } 
 }
 
 // TODO: Create a function to generate markdown for README
@@ -51,13 +61,13 @@ function generateMarkdown(data) {
   ${licenseRender}
 
   ## Contributing
-  ${data.contribute}
+  ${splitContributions(data)}
 
   ## Tests
   ${data.test}
 
   ## Questions
-  Please reach out to me through github at ${data.github}(https://github.com/${data.github}) or by email at ${data.email}
+  Please reach out to me through github at [${data.github}](https://github.com/${data.github}) or by email at ${data.email}
 
   `;
 }
