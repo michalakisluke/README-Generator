@@ -1,7 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 let licenseString;
 let licenseRender;
-let contString;
 
 function renderLicenseBadge(license) {
   if (license.licenses === 'MIT') {
@@ -29,12 +28,12 @@ function splitContributions(data) {
   let contArr = contString.split(',');
   for (i = 0; i < contArr.length; i++) {
     return `[${contArr[i]}](https://github.com/${contArr[i]})`;
-
   } 
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  splitContributions(data);
   renderLicenseBadge(data);
   renderLicenseLink(licenseString);
   return `# ${data.name}

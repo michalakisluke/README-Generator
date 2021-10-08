@@ -22,12 +22,12 @@
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Contributing
-  [michalakisluke](https://github.com/michalakisluke)
+  [luke](https://github.com/luke)
 
   ## Tests
-  no
+  test
 
   ## Questions
-  Please reach out to me through github at [hi](https://github.com/hi) or by email at ok
+  Please reach out to me through github at [test](https://github.com/test) or by email at tet
 
   
