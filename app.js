@@ -1,5 +1,6 @@
-const inquirer = require('inquirer');
+const writeFile = require('./utils/writeFile');
 const generateMarkdown = require("./utils/generateMarkdown");
+const inquirer = require('inquirer');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -106,6 +107,14 @@ const promptUser = () => {
     ]);  
 };
 
-promptUser().then(function(answer) {
-   console.log(generateMarkdown(answer));
+promptUser()
+.then(answer => {
+   return generateMarkdown(answer)
+})
+.then(readmeMD => {
+   return writeFile(readmeMD)
+})
+.catch(err => {
+   console.log(err);
 });
+
