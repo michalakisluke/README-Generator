@@ -7,7 +7,7 @@ const promptUser = () => {
         {
          type: 'input',
          name: 'name',
-         message: 'What is the name of your project? (Required)',
+         message: 'What is the name of your project?',
          validate: nameInput => {
             if (nameInput) {
                 return true;
@@ -21,7 +21,7 @@ const promptUser = () => {
         {
          type: 'input',
          name: 'description',
-         message: 'Enter a project description. (Required)',
+         message: 'Enter a project description.',
          validate: descInput => {
             if (descInput) {
                 return true;
@@ -69,7 +69,7 @@ const promptUser = () => {
         {
          type: 'input',
          name: 'contribute',
-         message: 'Please enter any contributors github usernames, seperated by commas.'
+         message: 'Please enter any contributors github usernames, seperated by commas (No spaces).'
         },
         {
          type: 'input',

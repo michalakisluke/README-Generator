@@ -26,9 +26,12 @@ function renderLicenseLink(licenseString) {
 function splitContributions(data) {
   let contString = data.contribute;
   let contArr = contString.split(',');
+  var contributions = "";
   for (i = 0; i < contArr.length; i++) {
-    return `[${contArr[i]}](https://github.com/${contArr[i]})`;
-  } 
+      contributions += `[${contArr[i]}](https://github.com/${contArr[i]})  `;
+    } 
+
+  return contributions
 }
 
 // TODO: Create a function to generate markdown for README

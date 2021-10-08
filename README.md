@@ -1,4 +1,4 @@
-# test
+# README Generator
 
   ## Table of Contents
   * [Description](#description)
@@ -10,24 +10,24 @@
   * [Questions](#questions)
   
   ## Description
-  test
+  This application allows users to generate a README for their projects by answering questions within the command terminal (It wrote this README that you're reading right now!)
 
   ## Installation
-  test
+  npm install inquirer
 
   ## Usage
-  test
+  To use, enter node app in the command terminal, in the directory that contains this file 
 
   ## License
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
   ## Contributing
-  [luke](https://github.com/luke)
+  [michalakisluke](https://github.com/michalakisluke)  
 
   ## Tests
-  test
+  n/a
 
   ## Questions
-  Please reach out to me through github at [test](https://github.com/test) or by email at tet
+  Please reach out to me through github at [michalakisluke](https://github.com/michalakisluke) or by email at michalakisluke@gmail.com
 
   
