@@ -1,6 +1,5 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
-const renderLicenseBadge = require("./utils/generateMarkdown");
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -107,8 +106,6 @@ const promptUser = () => {
     ]);  
 };
 
-promptUser().then(function(answer){
-   renderLicenseBadge(answer)
-}).then(function(answer) {
+promptUser().then(function(answer) {
    console.log(generateMarkdown(answer));
 });

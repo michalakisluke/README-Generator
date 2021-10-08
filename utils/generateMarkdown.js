@@ -1,11 +1,9 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
 let licenseString;
+let licenseRender;
 
 function renderLicenseBadge(license) {
-  if (license.licenses === 'null') {
-    return '';
-  } else if (license.licenses === 'MIT') {
+  if (license.licenses === 'MIT') {
     licenseString = 'mit'
   } else if (license.licenses === 'The Unlicense') {
     licenseString =  'unlicense'
@@ -15,15 +13,20 @@ function renderLicenseBadge(license) {
 }
 
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseLink(licenseString) {
+  if (licenseString === 'mit') {
+    licenseRender = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
+  } else if (licenseString=== 'unlicense') {
+    licenseRender =  '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)'
+  } else if (licenseString === 'bsl-1.0') {
+    licenseRender = '[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)'
+  }
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  renderLicenseBadge(data);
+  renderLicenseLink(licenseString);
   return `# ${data.name}
 
   ## Table of Contents
@@ -45,7 +48,8 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-  ${licenseString}
+  ${licenseRender}
+
   ## Contributing
   ${data.contribute}
 
@@ -59,4 +63,4 @@ function generateMarkdown(data) {
 }
 
 module.exports = generateMarkdown;
-module.exports = renderLicenseBadge;
+
