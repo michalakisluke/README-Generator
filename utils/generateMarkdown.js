@@ -1,6 +1,18 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+let licenseString;
+
+function renderLicenseBadge(license) {
+  if (license.licenses === 'null') {
+    return '';
+  } else if (license.licenses === 'MIT') {
+    licenseString = 'mit'
+  } else if (license.licenses === 'The Unlicense') {
+    licenseString =  'unlicense'
+  } else if (license.licenses === 'Boost Software License 1.0') {
+    licenseString = 'bsl-1.0'
+  }
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -33,7 +45,7 @@ function generateMarkdown(data) {
   ${data.usage}
 
   ## License
-
+  ${licenseString}
   ## Contributing
   ${data.contribute}
 
@@ -41,9 +53,10 @@ function generateMarkdown(data) {
   ${data.test}
 
   ## Questions
-  Please reach out to me through github at ${data.github} or by email at ${data.email}
+  Please reach out to me through github at ${data.github}(https://github.com/${data.github}) or by email at ${data.email}
 
   `;
 }
 
 module.exports = generateMarkdown;
+module.exports = renderLicenseBadge;

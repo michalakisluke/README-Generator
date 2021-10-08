@@ -1,5 +1,6 @@
 const inquirer = require('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
+const renderLicenseBadge = require("./utils/generateMarkdown");
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -63,7 +64,7 @@ const promptUser = () => {
          type: 'list',
          name: 'licenses',
          message: 'Please choose a license for your project.',
-         choices: ['MIT', 'The Unlicense', 'ISC']
+         choices: ['MIT', 'The Unlicense', 'Boost Software License 1.0']
         },
         {
          type: 'input',
@@ -106,6 +107,8 @@ const promptUser = () => {
     ]);  
 };
 
-promptUser().then(function(answer) {
+promptUser().then(function(answer){
+   renderLicenseBadge(answer)
+}).then(function(answer) {
    console.log(generateMarkdown(answer));
 });
