@@ -1,4 +1,6 @@
 const inquirer = require('inquirer');
+const generateMarkdown = require("./utils/generateMarkdown");
+
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -104,6 +106,6 @@ const promptUser = () => {
     ]);  
 };
 
-promptUser().then(function(answer){
-    console.log(answer);
+promptUser().then(function(answer) {
+   console.log(generateMarkdown(answer));
 });
