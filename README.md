@@ -10,13 +10,13 @@
   * [Questions](#questions)
   
   ## Description
-  This application allows users to generate a README for their projects by answering questions within the command terminal (It wrote this README that you're reading right now!)
+  This application generates a readme file from prompts to the user in the command terminal (This readme was generated using this app!)
 
   ## Installation
   npm install inquirer
 
   ## Usage
-  To use, enter node app in the command terminal, in the directory that contains this file 
+  Type node 'project file' to run this project, you must be in the directory containing this file
 
   ## License
   [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
